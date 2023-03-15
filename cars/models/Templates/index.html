@@ -1,0 +1,20 @@
+{%extends 'theme.html'%}
+{%block content%}
+<div class="container">
+  <div class="row">
+      <h1>MY Car Collections</h1>
+{%for model in models%}
+    <div class ="col-md-3">
+<div class="card" style="width: 18rem;">
+  <img src="{{model.image}}" class="card-img-top" alt="card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{model.name}}</h5>
+    <p class="card-text">{{model.price}}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+      </div>
+{%endfor%}
+    </div>
+  </div>
+{%endblock%}
